@@ -11,7 +11,7 @@ const projects = [
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80',
     projectLink: '#',
-    sourceCodeUrl: '#',
+    sourceCodeUrl: 'https://github.com/ashif-tk/autocare-booking-system',
     features: [
       'Service selection',
       'Booking form',
@@ -47,10 +47,10 @@ const projects = [
     title: 'PERSONAL PORTFOLIO',
     category: 'Personal Portfolio',
     description: 'A personal portfolio website created to introduce myself, showcase my projects and share my learning journey.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Tailwind CSS', 'React Router DOM'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Tailwind CSS'],
     image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
     projectLink: '#',
-    sourceCodeUrl: '#',
+    sourceCodeUrl: 'https://github.com/ashif-tk/ashift-protfolio',
     features: [
       'Responsive design',
       'Personal introduction',
@@ -59,10 +59,10 @@ const projects = [
       'About section',
       'Goals',
       'Contact section',
-      'React routing',
+      'Continuous vertical scrolling',
       'Interactive UI',
     ],
-    whatILearned: 'This portfolio helped me practice React routing, component-based design, and assembling a cleaner presentation for my work and goals.',
+    whatILearned: 'This portfolio helped me practice React components, smooth vertical scrolling, Tailwind styling, and assembling a clean presentation for my work and goals.',
   },
 ];
 

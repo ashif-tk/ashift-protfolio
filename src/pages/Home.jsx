@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { ArrowRight, Code2, Palette, MonitorSmartphone } from 'lucide-react';
 import { useEffect } from 'react';
 import profileImage from '../assets/profile.jpg';
@@ -22,6 +21,11 @@ function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const handleScrollTo = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
       <section className="section-padding relative">
@@ -42,36 +46,44 @@ function Home() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/projects" className="primary-btn">
+                <a
+                  href="#projects"
+                  onClick={(e) => handleScrollTo(e, 'projects')}
+                  className="primary-btn cursor-pointer"
+                >
                   View My Projects <ArrowRight className="ml-2" size={18} />
-                </Link>
-                <Link to="/contact" className="secondary-btn">
+                </a>
+                <a
+                  href="#contact"
+                  onClick={(e) => handleScrollTo(e, 'contact')}
+                  className="secondary-btn cursor-pointer"
+                >
                   Contact Me
-                </Link>
+                </a>
               </div>
             </div>
 
             <div className="relative flex justify-center reveal">
-              <div className="absolute -left-6 top-10 h-20 w-20 rounded-full bg-secondary/15 blur-2xl" />
-              <div className="absolute -right-4 bottom-10 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
+              <div className="absolute -left-10 top-1/4 h-48 w-48 rounded-full bg-secondary/20 blur-3xl" />
+              <div className="absolute -right-10 bottom-1/4 h-52 w-52 rounded-full bg-primary/20 blur-3xl" />
 
               <div className="relative">
-                <div className="absolute -left-8 top-12 animate-float rounded-2xl border border-primary/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary shadow-soft">
+                <div className="absolute -left-4 top-12 z-20 animate-float rounded-2xl border border-primary/20 bg-white/95 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary shadow-lg backdrop-blur-md sm:-left-6">
                   HTML
                 </div>
-                <div className="absolute -right-8 top-4 animate-float rounded-2xl border border-primary/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary shadow-soft [animation-delay:1s]">
+                <div className="absolute -right-4 top-4 z-20 animate-float rounded-2xl border border-primary/20 bg-white/95 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary shadow-lg backdrop-blur-md [animation-delay:1s] sm:-right-6">
                   CSS
                 </div>
-                <div className="absolute -right-10 bottom-10 animate-float rounded-2xl border border-primary/20 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary shadow-soft [animation-delay:2s]">
+                <div className="absolute -right-4 bottom-10 z-20 animate-float rounded-2xl border border-primary/20 bg-white/95 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary shadow-lg backdrop-blur-md [animation-delay:2s] sm:-right-6">
                   JavaScript
                 </div>
 
-                <div className="relative overflow-hidden rounded-[2rem] border-8 border-white bg-gradient-to-br from-white to-accent p-4 shadow-soft">
+                <div className="relative rounded-[2rem] border-8 border-white bg-gradient-to-br from-white via-accent/50 to-coralLight/40 p-3 shadow-xl">
                   <div className="overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-accent via-white to-coralLight p-2">
                     <img
                       src={profileImage}
                       alt="Muhammad Ashif T."
-                      className="h-[460px] w-[400px] rounded-[1.5rem] object-cover object-center"
+                      className="h-[420px] w-full max-w-[380px] rounded-[1.5rem] object-cover object-top shadow-inner sm:h-[460px]"
                     />
                   </div>
                 </div>
