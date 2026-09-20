@@ -10,7 +10,7 @@ const projects = [
     description: 'An interactive car workshop website designed to present services and provide a simple booking experience.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80',
-    projectLink: '#',
+    projectLink: 'https://autocare-booking-system.vercel.app/',
     sourceCodeUrl: 'https://github.com/ashif-tk/autocare-booking-system',
     features: [
       'Service selection',
