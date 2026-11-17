@@ -5,6 +5,24 @@ import ProjectCard from '../components/ProjectCard';
 
 const projects = [
   {
+    title: 'BUSINESS MANAGEMENT',
+    category: 'Web Application',
+    description: 'A modern business management platform featuring secure user authentication, Google Sign-In, and an intuitive dashboard.',
+    technologies: ['React.js', 'Tailwind CSS', 'JavaScript', 'Google Auth'],
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    projectLink: 'https://business-v8li.vercel.app/',
+    sourceCodeUrl: '#',
+    features: [
+      'Google Sign-In integration',
+      'Credentials login & registration',
+      'Password recovery options',
+      'Business management portal',
+      'Responsive design across devices',
+      'Clean and modern UI/UX',
+    ],
+    whatILearned: 'I practiced implementing user authentication with Google OAuth, managing user credentials, and building a responsive web portal for business management.',
+  },
+  {
     title: 'CAR WORKSHOP BOOKING',
     category: 'Web Development',
     description: 'An interactive car workshop website designed to present services and provide a simple booking experience.',
@@ -49,7 +67,7 @@ const projects = [
     description: 'A personal portfolio website created to introduce myself, showcase my projects and share my learning journey.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Tailwind CSS'],
     image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
-    projectLink: '#',
+    projectLink: 'https://ashift-protfolio.vercel.app/',
     sourceCodeUrl: 'https://github.com/ashif-tk/ashift-protfolio',
     features: [
       'Responsive design',
@@ -94,7 +112,7 @@ function Projects() {
           align="center"
         />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <div key={project.title} className="reveal">
               <ProjectCard project={project} onSelect={setSelectedProject} />
@@ -151,12 +169,16 @@ function Projects() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href={selectedProject.projectLink} className="primary-btn gap-2" target="_blank" rel="noreferrer">
-                  <ExternalLink size={16} /> View Project
-                </a>
-                <a href={selectedProject.sourceCodeUrl} className="secondary-btn gap-2" target="_blank" rel="noreferrer">
-                  <Code2 size={16} /> Source Code
-                </a>
+                {selectedProject.projectLink !== '#' && (
+                  <a href={selectedProject.projectLink} className="primary-btn gap-2" target="_blank" rel="noreferrer">
+                    <ExternalLink size={16} /> View Project
+                  </a>
+                )}
+                {selectedProject.sourceCodeUrl !== '#' && (
+                  <a href={selectedProject.sourceCodeUrl} className="secondary-btn gap-2" target="_blank" rel="noreferrer">
+                    <Code2 size={16} /> Source Code
+                  </a>
+                )}
               </div>
             </div>
           </div>

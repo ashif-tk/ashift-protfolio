@@ -93,7 +93,7 @@ function Home() {
 
           <div className="mt-16 grid gap-5 sm:grid-cols-3 reveal">
             {[
-              { value: '3+ Projects', label: 'Started building' },
+              { value: '4+ Projects', label: 'Started building' },
               { value: 'Currently Learning', label: 'Web & design basics' },
               { value: 'Always Improving', label: 'Practice and growth' },
             ].map((item) => (
